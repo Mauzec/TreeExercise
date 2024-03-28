@@ -154,7 +154,7 @@ class UI:
         line = self.canvas.create_line(from_x, from_y, to_x, to_y, width=LINE_WIDTH, fill='#E74C3C', tag='line')
         self.canvas.tag_lower(line)
 
-    def get_coordinate_edge(self, x1, y1, x2, y2, r=10):
+    def get_coordinate_edge(self, x1, y1, x2, y2, r=VERTEX_RADIUS):
         k = (y2-y1) / (x2 - x1)
         d = (x2 + k**2 * x1 + k * (y2 - y1))**2 - (k**2 + 1) * (x2**2 + (k*x1)**2 + 2*k*x1*(y2-y1) + (y2-y1)**2 - r**2)
         
